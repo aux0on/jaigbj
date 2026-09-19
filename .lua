@@ -1,5 +1,3 @@
--- thanks for doing it for me lol
-
 local table_insert = table.insert
 
 local Maid = {}
@@ -504,11 +502,13 @@ hiddenGui.IgnoreGuiInset = true
 hiddenGui.Parent = GetSafeGuiRoot()
 RootMaid:GiveTask(hiddenGui)
 
+local BombJump = shared.CreateTab("Bomb Jump+", "/aux0on/BJPIcon/refs/heads/main/Untitled163_20260918201001")
+
 local _game = shared.game_name
 
 if _game == "Murder Mystery 2" or _game == "Murder Mystery Modded" then
 
-local aboutSection = shared.AddSection("About")
+local aboutSection = BombJump:AddSection("About", "Information")
 
 aboutSection:AddParagraph("Bomb Jump+", "Plugin Made by @lzzzx")
 
@@ -519,7 +519,7 @@ end)
 
 shared.Notify("Bomb Jump+ Successfully Loaded", 5)
 
-local section = shared.AddSection("Bomb Jump+")
+local section = BombJump:AddSection("Bomb Jump+", "Main Controls")
 
 local CONFIG = {
     CooldownTime = 22.0,
@@ -848,7 +848,7 @@ section:AddKeybind("Bomb Jump Keybind", "E", FastBombJump)
 
 if _game == "Murder Mystery Modded" then
 
-local gbjSection = shared.AddSection("Gold Bomb Jump+")
+local gbjSection = BombJump:AddSection("Gold Bomb Jump+", "Main Controls")
 
 local gbjOnCooldown = false
 local goldBombJumpEnabled = false
