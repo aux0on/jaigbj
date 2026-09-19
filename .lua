@@ -517,9 +517,9 @@ aboutSection:AddToggle("Mute Button SFX", function(bool)
     UpdateAllButtonSounds()
 end)
 
-shared.Notify("Bomb Jump+ Successfully Loaded", 5)
+shared.Notify("Bomb Jump+ Successfully Loaded!", 1)
 
-local section = BombJump:AddSection("Bomb Jump+", "Main Controls")
+local section = BombJump:AddSection("Bomb Jump+", "MM2/MMV")
 
 local CONFIG = {
     CooldownTime = 22.0,
@@ -848,7 +848,7 @@ section:AddKeybind("Bomb Jump Keybind", "E", FastBombJump)
 
 if _game == "Murder Mystery Modded" then
 
-local gbjSection = BombJump:AddSection("Gold Bomb Jump+", "Main Controls")
+local gbjSection = BombJump:AddSection("Gold Bomb Jump+", "MMV")
 
 local gbjOnCooldown = false
 local goldBombJumpEnabled = false
